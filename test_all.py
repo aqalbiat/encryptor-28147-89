@@ -11,7 +11,8 @@ for i in range(5):
 for i in range(5, 10):
     tests.append(("data" + str(i), "encrypt" + str(i), "decrypt" + str(i), str(2 ** (i - 4)), "gamma"))
 
-serial_n = 1
+cnt = 0
+serial_n = 0
 for open_data, processed, deprocessed, quantity, regime in tests:
     current_cmd = ".\\test_single.bat"
     current_cmd += (" " + open_data)
@@ -20,10 +21,13 @@ for open_data, processed, deprocessed, quantity, regime in tests:
     current_cmd += (" " + quantity)
     current_cmd += (" " + regime)
     os.system(current_cmd)
+    serial_n += 1
     ok = are_equal(".\\storage\\" + open_data + ".txt", ".\\storage\\" + deprocessed + ".txt")
     print("Current test #" + str(serial_n), end=' ')
     if ok:
         print("OK")
+        cnt += 1
     else:
         print("Wrong")    
-    serial_n += 1
+
+print("Overall,", cnt, "tests out of", serial_n, "passed")
