@@ -1,0 +1,1 @@
+g++ source/main.cpp -o objects/app.exe --std=c++14 -Wall --pedantic-errors
