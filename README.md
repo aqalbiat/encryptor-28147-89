@@ -79,7 +79,6 @@ If you want to generate new configs for tests you may type:
 PS C:\Your\Directory\encryptor> python create_configs.py > .\storage\configs.txt
 ````
 If one needs to generate some new input data, then there is one option
-In order to execute all the tests, type command
 ````
 PS C:\Your\Directory\encryptor> python generate.py N > .\your\directory\your_file.txt
 ````
