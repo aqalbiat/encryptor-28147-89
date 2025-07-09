@@ -3,7 +3,7 @@ This is the repositery where I publish my software implementation of encryptor-2
 It is the standard of encryption from Soviet Union that is used to encrypt some data.
 The PDF variant of the documentation is located in **document** folder of this repo.
 
-## Envirenment 
+## Environment 
 This software was implemented in with these tools. All the commands in this README is executed in Microsoft PowerShell
 
 ````
