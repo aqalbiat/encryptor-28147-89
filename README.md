@@ -33,21 +33,37 @@ PS C:\Your\Directory\encryptor> ./objects/app.exe -i [IN_FILE] -o [OUT_FILE] -r 
 * OUT_FILE   -> output file/directory to which the software must print out the resultant data
 * REGIME     -> regime of encryption/decryption, currently, only two available: simple, gamma
 * CONF_FILE  -> a file/directory consisting data in hexodecimal numbers with 64 bit long number in each line. 
+
                 Configuration data must follow the format:
+                
                 .X0.X1  ->  1st line,   concatination of two 32 bit numbers
+                
                 .X2.X3  ->  2nd line,   concatination of two 32 bit numebrs
+                
                 .X4.X5  ->  3rd line,   concatination of two 32 bit numebrs
+                
                 .X6.X7  ->  4th line,   concatination of two 32 bit numbers
+                
                 .K1     ->  5th line,   one whole 64 bit number
+                
                 .K2     ->  6th line,   one whole 64 bit number
+                
                 .K3     ->  7th line,   one whole 64 bit number
+                
                 .K4     ->  8th line,   one whole 64 bit number
+                
                 .K5     ->  9th line,   one whole 64 bit number
+                
                 .K6     ->  10th line,  one whole 64 bit number
+                
                 .K7     ->  11th line,  one whole 64 bit number
+                
                 .K8     ->  12th line,  one whole 64 bit number
+                
                 .S      ->  13th line,  one whole 64 bit number
+                
                 .C1.C2  ->  14th line,  concatination of two 32 bit numbers
+
 * (-dec|-enc) -> choose one of the processes to apply, -dec for decryption, -enc for encryption
 
 ## Testing
@@ -59,7 +75,6 @@ This command runs 10 tests, where first five are for **simple** regime and next 
 
 ## Auxalary files
 If you want to generate new configs for tests you may type:
-In order to execute all the tests, type command
 ````
 PS C:\Your\Directory\encryptor> python create_configs.py > .\storage\configs.txt
 ````
