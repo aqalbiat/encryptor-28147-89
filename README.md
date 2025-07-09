@@ -4,7 +4,7 @@ It is the standard of encryption from Soviet Union that is used to encrypt some 
 The PDF variant of the documentation is located in **document** folder of this repo.
 
 ## Envirenment 
-This tool was implemented in with these tools
+This software was implemented in with these tools. All the commands in this README is executed in Microsoft PowerShell
 
 ````
 PS C:\Your\Directory\encryptor> python --version
@@ -49,3 +49,24 @@ PS C:\Your\Directory\encryptor> ./objects/app.exe -i [IN_FILE] -o [OUT_FILE] -r 
                 .S      ->  13th line,  one whole 64 bit number
                 .C1.C2  ->  14th line,  concatination of two 32 bit numbers
 * (-dec|-enc) -> choose one of the processes to apply, -dec for decryption, -enc for encryption
+
+## Testing
+In order to execute all the tests, type command
+````
+PS C:\Your\Directory\encryptor> python test_all.py
+````
+This command runs 10 tests, where first five are for **simple** regime and next five are for **gamma** regime.
+
+## Auxalary files
+If you want to generate new configs for tests you may type:
+In order to execute all the tests, type command
+````
+PS C:\Your\Directory\encryptor> python create_configs.py > .\storage\configs.txt
+````
+If one needs to generate some new input data, then there is one option
+In order to execute all the tests, type command
+````
+PS C:\Your\Directory\encryptor> python generate.py N > .\your\directory\your_file.txt
+````
+## About upload.bat file
+It is just helper for git push. Does not play a crucial role in using/testing of this CLI-tool. 
